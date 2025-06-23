@@ -1,0 +1,112 @@
+/* Base container */
+.shimmer-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: var(--background-color);
+}
+
+/* All shimmer elements share these properties */
+.shimmer-element {
+  background: var(--shimmer-base);
+  background: linear-gradient(90deg, 
+    var(--shimmer-base) 25%, 
+    var(--shimmer-highlight) 50%, 
+    var(--shimmer-base) 75%);
+  background-size: 200% 100%;
+  animation: shimmerAnimation 1.5s infinite linear;
+  border-radius: 4px;
+}
+
+/* Back button shimmer */
+.shimmer-back-button {
+  width: 100px;
+  height: 40px;
+  margin-bottom: 60px;
+  display: block;
+}
+
+/* Country details layout */
+.shimmer-country-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .shimmer-country-details {
+    flex-direction: row;
+  }
+}
+
+/* Flag shimmer */
+.shimmer-flag {
+  width: 100%;
+  height: 300px;
+  flex: 1;
+}
+
+/* Details container */
+.shimmer-details-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Country name shimmer */
+.shimmer-title {
+  height: 40px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+/* Details grid */
+.shimmer-details-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .shimmer-details-text {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Text line shimmers */
+.shimmer-text-line {
+  height: 20px;
+  width: 80%;
+}
+
+/* Border countries section */
+.shimmer-border-countries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.shimmer-border-title {
+  height: 20px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.shimmer-border-country {
+  height: 30px;
+  width: 80px;
+  display: inline-block;
+}
+
+/* Shimmer animation */
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
